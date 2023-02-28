@@ -1,0 +1,25 @@
+<div class="container info">
+	<div class="content">
+		<img ng-src="{{ planet.status < 0 ? planet.image.dark : planet.image.normal }}" alt="">
+		<div class="message" id="txtPlanetInfo" tabindex="0">
+			<h1>{{ planet.name }}</h1>
+			<div class="text" ng-bind-html="planetinfo"></div>
+			<div class="controls">
+				<div ng-show="loaded == 1">
+					<button ng-click="exitPlanet()">Exit</button>
+					<button ng-click="continueGame();" ng-show="hasCharacters">{{ label }}</button>
+				</div>
+				<div ng-hide="loaded == 1">
+					<div class="loadingProgress">
+						<div class="bar" ng-style="{width: loaded * 100 + '%'}"></div>
+					</div>
+					<div>Loading...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="controlbar bottom">
+		<div>&nbsp;</div>
+		<button ng-click="openSettings()" class="round" aria-label="Settings" title="Open settings"><img src="_/img/icon_gear.svg" alt="" class="icon"></button>
+	</div>
+</div>

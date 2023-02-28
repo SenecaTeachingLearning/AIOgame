@@ -1,0 +1,44 @@
+<div class="container settings">
+	<div class="content">
+		<div  id="dlgMenu" tabindex="0">
+			<h1>Settings</h1>
+			<ul class="menu">
+				<li class="switch" tabindex="0" role="checkbox" 
+					aria-checked="{{  aio.sound.music }}"
+					ng-click="toggleMusic($event)" 
+					ng-keydown="toggleMusic($event)">
+					<label>Music</label>
+					<input name="music" type="checkbox"
+						ng-model="aio.sound.music" 
+						ng-checked="aio.sound.music">
+					<span class="slider"></span>
+				</li>
+				<li class="switch" tabindex="0" role="checkbox" 
+					aria-checked="{{  aio.sound.speech }}"
+					ng-click="toggleSpeech($event)" 
+					ng-keydown="toggleSpeech($event)">
+					<label>Speech</label>
+					<input name="music" type="checkbox"
+						ng-model="aio.sound.speech" 
+						ng-checked="aio.sound.speech">
+					<span class="slider"></span>
+				</li>
+				<li>
+					<button class="linkbutton" ng-click="openLocation('/gameinfo/howto')">How to play</button> 
+				</li>
+				<li>
+					<button class="linkbutton" ng-click="openLocation('/gameinfo/download')">Discussion Guide</button>
+				</li>
+			</ul>
+		</div>
+		<p><button ng-click="closeSettings()">Close</button></p>
+	</div>
+	<!--<div class="controlbar bottom">
+		<div>&copy; Toronto Metropolitan University</div>
+		<div>
+			<button class="linkbutton" ng-click="openLocation('/gameinfo/about')">About</button> | 
+			<button class="linkbutton" ng-click="openLocation('/gameinfo/terms')">Terms of Use</button> | 
+			<button class="linkbutton" ng-click="openLocation('/gameinfo/contacts')">Contacts</button>
+		</div>
+	</div>-->
+</div>

@@ -1,0 +1,19 @@
+<div class="container boss">
+	<div armies scenes="scenes" attempts="attempts"></div>
+	<div class="content">
+		<div id="bossQuestion" ng-bind-html="currentQuestion.question" class="question" tabindex="0"></div>
+		<p>
+			<button ng-repeat="option in currentQuestion.options" 
+				ng-click="verifyAnswer($index, option)">{{ option.label }}</button>
+		</p>
+	</div>
+	<div id="dlgBossFeedback" class="overlay feedback" ng-class="{ visible: feedback.message.length }">
+		<div class="dialog" ng-class="[ feedback.classname ]">
+			<img ng-src="{{ feedback.image }}" ng-visible="feedback.image.length" alt="">
+			<div class="content">
+				<div id="txtBossFeedback" ng-bind-html="feedback.message" class="message" tabindex="0"></div>
+				<button ng-click="closeFeedback();">Continue</button>
+			</div>
+		</div>
+	</div>
+</div>
