@@ -1,0 +1,54 @@
+<div class="container">
+	<div class="planet">
+		<div class="main">
+			<div class="background" ng-style="{'justify-content': bgPosition}">
+				<img ng-src="{{bgImage}}" alt="">
+			</div>
+			<div class="foreground">
+				<div armies scenes="scenes"></div>
+				<div id="alien" alien ng-show="currentScene.type=='single'"
+					 scene="currentScene" feedback="feedback" hint="currentHint" api="directiveAPI"
+					 scene-ended="getNextScene" sound-play="playSound(snd)" sound-stop="stopSound()"></div>
+				<div id="chat" chat ng-show="currentScene.type=='chat'"
+					 scene="currentScene" feedback="feedback" hint="currentHint" api="directiveAPI" chat-hidden="isChatHidden"
+					 scene-ended="getNextScene" sound-play="playSound(snd)" sound-stop="stopSound()"></div>
+				<div class="controls bottom">
+					<!--<button ng-click="openSettings()"><img src="_/img/icon_gear.svg" alt="" class="icon"> Settings</button>
+					<div>&nbsp;</div>-->
+					<div class="chat-button" ng-show="currentScene.type=='chat' && isChatHidden">
+						<div class="wave"></div>
+						<div class="wave" style="animation-delay: .3s;"></div>
+						<button id="btnOpenChat" ng-click="openChat()">Space Chat</button>
+					</div>
+					<div>&nbsp;</div>
+					<div style="display: flex;">
+						<button ng-click="exitPlanet()">Leave Planet</button> &nbsp;
+						<button ng-click="openSettings()" class="round" aria-label="Settings" title="Open settings"><img src="_/img/icon_gear.svg" alt="" class="icon"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dlgFeedback" class="overlay feedback" ng-class="{ visible: feedback.message.length }">
+		<div class="dialog" ng-class="[ feedback.classname ]">
+			<img ng-src="{{ feedback.image }}" ng-visible="feedback.image.length" alt="">
+			<div class="content">
+				<div id="txtFeedbackBalloon" ng-bind-html="feedback.message" class="message" tabindex="0"></div>
+				<button ng-click="closeFeedback();">Continue</button>
+			</div>
+		
+		</div>
+	</div>
+	<div id="dlgHint" class="overlay hint"  ng-class="{ visible: currentHint.message.length }">
+		<div id="txtHintBalloon" class="dialog searchbot" tabindex="0">
+			<h1>SearchBot</h1>
+			<div class="content">
+				<img class="toolimage" src="_/img/searchbot.png" alt="">
+				<div ng-bind-html="currentHint.message" class="toolmessage"></div>
+			</div>
+			<div>
+				<button id="btnCloseHint" ng-click="closeHints();">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

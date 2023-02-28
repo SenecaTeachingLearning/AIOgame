@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="aic" ng-strict-di>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<title>Academic Integrity in Cyberspace</title>
+		<base href="/aic/">
+		<link rel="stylesheet" href="_/game.css">
+		<script src="_/jquery.min.js"></script>
+		<script src="_/angular.min.js"></script>
+		<script src="_/angular-route.js"></script>
+		<script src="_/angular-cookies.js"></script>
+		<script src="_/angular-sanitize.js"></script>
+		<script src="_/underscore.min.js"></script>
+		<script src="_/preloadjs.min.js"></script>
+		<script src="_/soundjs.min.js"></script>
+		<script src="_/game.js"></script>
+	</head>
+	<body ng-controller="splashCtrl">
+		<div class="fullscreen">
+			<div ng-view class="view" role="application"></div>
+			<div class="orientation_message">
+				<div class="textbox">
+					<p class="icon">
+						<img src="_/img/rotate_device.png" alt="">
+					</p>
+					<p>This application is optimized for landscape view Please rotate your device horizontally, or adjust your browser window so that its width is larger than height.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="space">
+		<h1>Select Planet</h1>
+		<div class="planets">
+			<ul id="lstPlanets" tabindex="0" aria-label="Select planet">
+				<li ng-repeat="planet in planets">
+					<a href="" 
+						ng-click="selectPlanet($event, $index)"
+						ng-keydown="selectPlanet($event, $index)">
+						<div class="thumb">
+							<img ng-src="{{ planet.status < 0 ? planet.image.dark : planet.image.normal }}" alt="">
+						</div>
+						<div>
+							<span class="readersonly">Go to planet </span>{{ planet.name }}
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="controlbar bottom">
+		<div>&nbsp;</div>
+		<button ng-click="openSettings()" class="round" aria-label="Settings" title="Open settings"><img src="_/img/icon_gear.svg" alt="" class="icon"></button>
+	</div>
+</div>
