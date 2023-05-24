@@ -230,13 +230,13 @@
 					"options": [
 						{
 							"label": "Yeah, it's just for participation marks",
-							"correct": true	,
+							"correct": false, 
 							"feedback": "<p>Incorrect. Small assignments build into the larger course goals and help you master the course content.</p>",
 							"next": 6
 						},
 						{
 							"label": "It is important to present your ideas clearly and honestly, even for small assignments",
-							"correct": false,
+							"correct": true,
 							"feedback": "<p>Correct! Small assignments build into the larger course goals and help you master the course content.</p>",
 							"next": null
 						}
@@ -540,7 +540,7 @@
 							"label": "They want to be able to trust everyone to be who they say they are! If they can't trust us, they'll ask for tentacle scans next year!",
 							"correct": true,
 							"feedback": "<p>Correct! Remote teaching and learning requires trust to succeed. Even if a class is not in person, only enrolled students should attend.</p>",
-							"next": 6
+							"next": 5
 						},
 						{
 							"label": "You've got a good point - it's such a small thing, so you're fine.",
@@ -633,7 +633,7 @@
 			"boss": [
 				{
 					"question": "If an assignment does not specify that group work is allowed, is a student is expected to complete all components, steps, or requirements individually?",
-					"voiceover": "_/snd/voiceover/p1_s3_boss.mp3",
+					"voiceover": "_/snd/voiceover/p1_s4_boss.mp3",
 					"options": [
 						{
 							"label": "Yes",
@@ -937,7 +937,7 @@
 					"question": "We can check out my buddy's assignment. He took this class last year.",
 					"options": [
 						{
-							"label": "Do it! Wait, what did she get on it?!",
+							"label": "Do it! Wait, what did he get on it?!",
 							"correct": 0,
 							"feedback": "",
 							"next": 9
@@ -1112,7 +1112,7 @@
 			"boss": [
 				{
 					"question": "Which of the following questions is appropriate to ask a colleague when working on an individual assignment?",
-					"voiceover": "_/snd/voiceover/p1_s4_boss.mp3",
+					"voiceover": "_/snd/voiceover/p1_s3_boss.mp3",
 					"options": [
 						{
 							"label": "Which topic did you pick for your paper?",
@@ -1806,12 +1806,12 @@
 					"voiceover": "_/snd/voiceover/p2_s4_boss.mp3",
 					"options": [
 						{
-							"label": "No",
+							"label": "Yes",
 							"correct": 1,
 							"feedback": "<p>That is correct!</p>"
 						},
 						{
-							"label": "Yes",
+							"label": "No",
 							"correct": 0,
 							"feedback": "<p>Sorry! That is wrong!</p>"
 						}
@@ -1940,13 +1940,13 @@
 							"label": "I think that just means \"summarize\" each article.",
 							"correct": false,
 							"feedback": "<p>Incorrect! To synthesize research, you need to identify and explain the similarities and differences between the articles.</p>",
-							"next": 2
+							"next": null
 						},
 						{
 							"label": "You'll need to find and explain the differences and similarities between them.",
 							"correct": true,
 							"feedback": "<p>Correct! To synthesize research, you need to identify and explain the similarities and differences  between the articles.</p>",
-							"next": 3
+							"next": null
 						}
 					],
 					"next": null
@@ -2544,7 +2544,7 @@
 				{
 					"id": 11,
 					"character": 1,
-					"question": "TI thought I was good at multitasking. I ran an outpost on Vergune 6 for 12 years - why is it so hard for me to organize my course work and attend lectures online?",
+					"question": "I thought I was good at multitasking. I ran an outpost on Vergune 6 for 12 years - why is it so hard for me to organize my course work and attend lectures online?",
 					"options": [
 						{
 							"label": "Don't be afraid to send your profs a message to ask for help. They keep track of supports and workshops for students. I can't keep up by myself! :D",
@@ -3145,7 +3145,7 @@
 					"question": "I need some stress, though, or I won't even study. I've got three exams next week, and I'm gonna cram for all of them.",
 					"options": [
 						{
-							"label": "All is stress is bad.",
+							"label": "All stress is bad.",
 							"correct": 0,
 							"feedback": "",
 							"next": 9

@@ -565,12 +565,14 @@ app.controller('planetInfoCtrl', ['$rootScope', '$scope', '$location', '$storage
 					scene.allegiance = 0;
 				});
 				$rootScope.saveState();
+				$rootScope.stopAmbientSound();
 				$location.path('/planet/' + $scope.planetIndex);
 			} else if ($scope.hasCharacters) {
-				$rootScope.ambientSoundName = $scope.planet.name;
+				/* $rootScope.ambientSoundName = $scope.planet.name;
 				if($rootScope.aio.sound.music) {
 					$rootScope.playAmbientSound(true);
-				}
+				}*/
+				$rootScope.stopAmbientSound();
 				$location.path('/planet/' + $scope.planetIndex);
 			} else {
 				$location.path('/space/');
@@ -1131,6 +1133,9 @@ app.controller('bossCtrl', ['$rootScope', '$scope', '$location', '$storage', '$r
 			};
 			if ($scope.completed) {
 				$rootScope.ambientSoundName = 'space';
+				if($rootScope.aio.sound.music) {
+					$rootScope.playAmbientSound(true);
+				}
 				$location.path("/space/");
 			} else {
 				$scope.currentQuestion = {};
